@@ -1,0 +1,71 @@
+; Program to create a counter that goes from 0 to 9
+	text
+	org 0x000 ; start here on reset
+	ldm r4, r0
+	ldm r1, r0
+	ldm r2, r0
+	ldm r3, r0
+	
+	jmp load
+; Data memory layout
+	data
+	input: bss 1
+	conteoMax: bss 1
+	result: bss 1
+	dispCounter: byte 0
+	nueve: byte 9
+	uno: byte 1
+	
+; Main program
+			text
+			org 0x010
+			
+waitIn: 	ldm r4, r0
+			inp r4, input
+			jsb delay
+			sub r0, r3, r4
+			bz waitIn
+			ldm r4, r0
+			jsb delay
+			jsb delay 
+			jsb delay
+			jmp main
+
+load: 		ldm r2, r0
+			inp r2, conteoMax
+			jsb delay 
+			jsb delay
+			sub r0, r2, r0
+			bz maxerror1
+			jsb delay
+			jsb delay
+			jsb delay
+			ldm r1, dispCounter ; load values
+			ldm r3, uno
+			ldm r4, r0
+			jmp waitIn
+			
+main:      ldm r4, r0
+		   stm r1, result
+		   out r1, result
+		   sub r0, r2, r1
+		   bz load
+		   add r1, r1, 1
+		   jmp waitIn
+		   
+maxerror1: add r2, r2, 1
+			jmp load
+			
+delay:		add r7, r0, 0
+again3:		add r6, r0, 0
+again2:		add r5, r0, 0
+again1:		add r5, r5, 1
+			sub r0, r5, 0xFF
+			bnz again1
+			add r6, r6, 1
+			sub r0, r6, 0xFF
+			bnz again2
+			add r7, r7, 1
+			sub r0, r7, 0x0C
+			bnz again3
+			ret
