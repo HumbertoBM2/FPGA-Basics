@@ -28,7 +28,7 @@ The repository is organized into the following folders:
 Each folder may contain subfolders that include all the needed files for a specific application.
 
 ## Prerequisites
-Before using the codes in this repository, ensure you have the following prerequisites installed:
+Before using the codes in this repository, ensure you have the following prerequisites:
 - [DE10-Lite module](https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1021)
 - [FTDI module](https://www.amazon.com/HiLetgo-FT232RL-Converter-Adapter-Breakout/dp/B00IJXZQ7C/ref=sr_1_8?crid=8GBTH7BE9XIG&dib=eyJ2IjoiMSJ9._leohITZkTn4lLg5Q8MOtb-1VaksjOt_KecjEeIGWgc-Oiv4QvARH-rlnJF5NPZXjb-R--HauWrX97mZ0Wf_n-y89S7tIhQuPR8WQezLH7f4kY1kf4HECLQEuo2H0hGhze8hvFQI-iqKRr4bxnob5iqX_c2bgkavRYN98pZ4H0WWEbO9_rVEJlypdVBr8P9EAe-FCQoahkzQP1zIgEKxwDCIQqzDT56sLYwBdueIbFM.yn2TsdrxuZD2T74MOu2fr6WFSsNxi6yqIg1_YFxeXH4&dib_tag=se&keywords=ftdi+usb+to+serial&qid=1714191887&sprefix=ftdi%2Caps%2C101&sr=8-8)
 - [Arduino UNO](https://store-usa.arduino.cc/products/arduino-uno-rev3)
